@@ -1,8 +1,7 @@
 # Bees and 3s
-![Sorting Bees and 3s Image](data/cgp_screenshot.png)
+![Sorting Bees and 3s Image](data/readme-gif.gif)
 
-A very simple Tensorflow implementation of a neural network that classifies bees and 3s.
-
+#### A very simple Tensorflow implementation of a neural network that classifies bees and 3s. So useful.
 ### Setup:
 ```
 git clone https://github.com/jakegrigsby/Bees-and-3s.git
