@@ -18,3 +18,6 @@ python predict.py *url for your image here*
 ```
  This should only take a few minutes to run (it's a very small model) and will overwrite the saved weights in the `models` folder.
 
+-----------------------------------------------------------
+## It can't be fooled:
+![](data/not_a_bee.png)
