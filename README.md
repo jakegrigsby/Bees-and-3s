@@ -11,7 +11,7 @@ python predict.py *url for your image here*
 <img src="data/three_prediction_1.png" width=300>
 
 ### (Re)train:
-The script I use to load and resize the data is included (`setup.py`), but the raw images are too big to include. I've uploaded the output of the setup script - a numpy file holding the processed images and their labels - [here](). Once that's in the `data` folder, all you need to do is make your changes and run `train.py`.
+The script I use to load and resize the data is included (`setup.py`), but the raw images are too big to include. I've uploaded the output of the setup script - a numpy file holding the processed images and their labels - [here](https://virginia.box.com/s/c10ct4laxstyovwqf0s7633vk87cw1hk). Once that's in the `data` folder, all you need to do is make your changes and run `train.py`.
 
 
 ### Noise
