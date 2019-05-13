@@ -18,4 +18,4 @@ The script I use to load and resize the data is included (`setup.py`), but the r
 This version adds random noise generation to the image augmentation pipeline. This is just something I've been messing around with and needs some more development. I noticed that the network was basically cheating by looking to see if there was a background to the image -  a background meant bee and blank meant three. That pretty much works for the dataset I made, but it meant the network was getting tricked by bees on white backdrops and threes with something else going on in the image. The idea is that, by adding noise to flat white and black backgrounds, we are helping the network deal with those edge cases by removing the handicap. We are making it better by making its task significantly harder. Here's a demo of the noise generating function (`random_noise.bg_noise_tf`):
 
 <img src="data/bee_noise.png" height=300 align=center>
-<img src="data/Three_noise.png" height=300 align=center>
+<img src="data/Three_noise.png" height=200 width= 400 align=center>
