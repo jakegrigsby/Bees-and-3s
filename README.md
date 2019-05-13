@@ -11,13 +11,11 @@ python predict.py *url for your image here*
 <img src="data/three_prediction_1.png" width=300>
 
 ### (Re)train:
- The 3s dataset comes packaged with Tensorflow, but you'll need some bee pictures from [kaggle](https://www.kaggle.com/jenny18/honey-bee-annotated-images). Download the dataset and unzip `bee_imgs.zip` and place the newly created `bee_imgs` folder in the `data` folder of this repo. Then: 
-```
-    python setup.py
-    python train.py
-```
- This should only take a few minutes to run (it's a very small model) and will overwrite the saved weights in the `models` folder.
+The script I use to load and resize the data is included (`setup.py`), but the raw images are too big to include. I've uploaded the output of the setup script - a numpy file holding the processed images and their labels - [here](). Once that's in the `data` folder, all you need to do is make your changes and run `train.py`.
 
------------------------------------------------------------
-## It can't be fooled:
-![](data/not_a_bee.png)
+
+### Noise
+This version adds random noise generation to the image augmentation pipeline. This is just something I've been messing around with and needs some more development. I noticed that the network was basically cheating by looking to see if there was a background to the image -  a background meant bee and blank meant three. That pretty much works for the dataset I made, but it meant the network was getting tricked by bees on white backdrops and threes with something else going on in the image. The idea is that, by adding noise to flat white and black backgrounds, we are helping the network deal with those edge cases by removing the handicap. We are making it better by making its task significantly harder. Here's a demo of the noise generating function (`random_noise.bg_noise_tf`):
+
+<img src="data/bee_noise.png" height=300 align=center>
+<img src="data/Three_noise.png" height=300 align=center>
